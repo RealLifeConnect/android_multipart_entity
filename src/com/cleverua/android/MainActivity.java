@@ -37,7 +37,7 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        setPersistent(true); // a hack to prevent OS from killing the activity 
+        //setPersistent(true); // a hack to prevent OS from killing the activity 
         
         name    = (EditText) findViewById(R.id.name);
         value   = (EditText) findViewById(R.id.value);
@@ -113,7 +113,7 @@ public class MainActivity extends BaseActivity {
                 if (TextUtils.isEmpty(c)) {
                     strPart = new StringPart(n, v);
                 } else {
-                    strPart = new StringPart(n, v, c);
+                    strPart = new StringPart(n, v, null, c);
                 }
                 
                 entity.addPart(strPart);
